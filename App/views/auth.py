@@ -21,6 +21,12 @@ def get_user_page():
     users = get_all_users()
     return render_template('users.html', users=users)
 
+@auth_views.route('/home', methods=['GET'])
+@login_required
+def home_page():
+    user_logged_in = current_user.is_authenticated
+    print(user_logged_in)  # Debugging line
+    return render_template('home.html', user_logged_in=user_logged_in)
 
 @auth_views.route('/identify', methods=['GET'])
 @login_required
@@ -34,7 +40,8 @@ def login_action():
     user = login(data['username'], data['password'])
     if user:
         login_user(user)
-        return 'user logged in!'
+        print(current_user)  # Debugging line
+        return redirect(url_for('auth_views.home_page'))
     return 'bad username or password given', 401
 
 @auth_views.route('/logout', methods=['GET'])

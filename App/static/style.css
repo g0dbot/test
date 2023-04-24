@@ -1,0 +1,180 @@
+a {
+    text-decoration: none;
+    color:antiquewhite;
+    }
+
+p {
+    color:antiquewhite;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom right, #10002b, #000000);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    background-color: #5a189a;
+    overflow: hidden;
+    }
+
+    .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .navbar-item {
+    flex-basis: 5%;
+    text-align: center;
+    padding: 10px 0;
+    }
+    
+    .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    }
+
+    button[type="submit"] {
+    padding: 8px;
+    margin-left: 5px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+    background-color: #ccc;
+    }
+
+    @media only screen and (max-width: 768px) {
+    .navbar-item {
+        flex-basis: 100%;
+    }
+}
+
+#signupwrapper {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#left {
+    width: 66.67%;
+    box-sizing: border-box;
+    font-size: 24px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#signupwrapper-supertext {
+    font-size: 10vw;
+    color:antiquewhite;
+}
+#signupwrapper-subtext{
+    font-size: 5vw;
+    color:antiquewhite;
+}
+
+#right {
+    width: 33.33%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupwrapper-form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 90%;
+height: 90%;
+margin: auto;
+background-color: #D8BFD8; /* lilac background */
+border-radius: 20px;
+padding: 20px;
+box-sizing: border-box;
+}
+
+#signupwrapper-form label {
+margin-bottom: 10px;
+}
+
+#signupwrapper-form input[type="text"],
+#signupwrapper-form input[type="password"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+box-sizing: border-box;
+border-radius: 5px;
+border: none;
+}
+
+#signupwrapper-form input[type="submit"] {
+background-color: #008CBA;
+color: #FFFFFF;
+padding: 10px 20px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 25vh;
+    height: 25vh;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+  }
+  
+  .card-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+  
+    .card {
+      width: 90%;
+    }
+  
